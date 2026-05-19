@@ -1,0 +1,169 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!
+{% endblock %}
+
+{% block body %}
+	<section class="pt-2 pb-3 text-center container">
+		<div class="row py-lg-5">
+			<div class="col-lg-6 col-md-8 mx-auto">
+				<h1 class="fw-light">Blog
+				</h1>
+				<p class="lead text-body-secondary">Bienvenue sur notre blog dédié aux formations en informatique et aux nouvelles technologies.
+				Notre mission est d’aider les étudiants, débutants et passionnés du numérique à développer leurs compétences grâce à des contenus clairs, modernes et accessibles.
+
+				Sur ce blog, vous découvrirez des articles, tutoriels et formations autour de plusieurs domaines incontournables de l’informatique
+				</p>
+				<p>
+					<a href="#" class="btn btn-primary my-2">Voir les formations </a>
+					<a href="#" class="btn btn-secondary my-2">En savoir plus</a>
+				</p>
+			</div>
+		</div>
+	</section>
+	
+	<div class="album py-3 bg-body-tertiary">
+		<div class="container">
+			<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+			{# 1ere carte  #}
+				<div class="col">
+					<div class="card shadow-sm">
+						<img src="{{ asset('assets/img/IA.jpeg') }}" style="width: 100%; height: 250px; object-fit: cover;" alt="IA">
+						{#  faire ca avec tout les img  #}
+						<div class="card-body">
+							<p class="card-text">Explorez le Machine Learning, les réseaux neuronaux et les outils modernes utilisés dans l’IA avec Python et TensorFlow.</p>
+							<div class="d-flex justify-content-between align-items-center">
+								<div class="btn-group">
+									<button type="button" class="btn btn-sm btn-outline-secondary">voir</button>
+									<button type="button" class="btn btn-sm btn-outline-secondary">editer</button>
+								</div>
+								<small class="text-body-secondary">9 mins</small>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+				{# 2eme carte #}
+					<div class="card shadow-sm">
+						<img src="{{ asset('assets/img/devMobile.jpeg') }}" style="width: 100%; height: 250px; object-fit: cover;" alt="dev mobile">
+						<div class="card-body">
+							<p class="card-text">Concevez des applications Android et iOS avec Flutter ou React Native et publiez vos projets sur les stores mobiles.</p>
+							<div class="d-flex justify-content-between align-items-center">
+								<div class="btn-group">
+									<button type="button" class="btn btn-sm btn-outline-secondary">voir</button>
+									<button type="button" class="btn btn-sm btn-outline-secondary">editer</button>
+								</div>
+								<small class="text-body-secondary">9 mins</small>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card shadow-sm">
+						<img src="{{ asset('assets/img/data-science.jpeg') }}" style="width: 100%; height: 250px; object-fit: cover;" alt="data science">
+						<div class="card-body">
+							<p class="card-text">Maîtrisez l’analyse de données, Python, Pandas et la visualisation pour transformer des données en décisions stratégiques.</p>
+							<div class="d-flex justify-content-between align-items-center">
+								<div class="btn-group">
+									<button type="button" class="btn btn-sm btn-outline-secondary">voir</button>
+									<button type="button" class="btn btn-sm btn-outline-secondary">editer</button>
+								</div>
+								<small class="text-body-secondary">9 mins</small>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card shadow-sm">
+						<img src="{{ asset('assets/img/reseau.jpeg') }}" style="width: 100%; height: 250px; object-fit: cover;" alt="reseau">
+						<div class="card-body">
+							<p class="card-text">Apprenez à configurer des réseaux, gérer des serveurs et comprendre les protocoles essentiels utilisés en entreprise.</p>
+							<div class="d-flex justify-content-between align-items-center">
+								<div class="btn-group">
+									<button type="button" class="btn btn-sm btn-outline-secondary">voir</button>
+									<button type="button" class="btn btn-sm btn-outline-secondary">editer</button>
+								</div>
+								<small class="text-body-secondary">9 mins</small>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card shadow-sm">
+						<img src="{{ asset('assets/img/cloud.jpeg') }}" style="width: 100%; height: 250px; object-fit: cover;" alt="cloud">
+						<div class="card-body">
+							<p class="card-text">Découvrez AWS, Docker, Kubernetes et les méthodes DevOps pour déployer des applications modernes dans le cloud.</p>
+							<div class="d-flex justify-content-between align-items-center">
+								<div class="btn-group">
+									<button type="button" class="btn btn-sm btn-outline-secondary">voir</button>
+									<button type="button" class="btn btn-sm btn-outline-secondary">editer</button>
+								</div>
+								<small class="text-body-secondary">9 mins</small>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card shadow-sm">
+						<img src="{{ asset('assets/img/devWeb.jpeg') }}" style="width: 100%; height: 250px; object-fit: cover;" alt="devWeb">
+						<div class="card-body">
+							<p class="card-text">Créez des interfaces élégantes et intuitives avec Figma, Adobe XD et les principes d’expérience utilisateur.</p>
+							<div class="d-flex justify-content-between align-items-center">
+								<div class="btn-group">
+									<button type="button" class="btn btn-sm btn-outline-secondary">voir</button>
+									<button type="button" class="btn btn-sm btn-outline-secondary">editer</button>
+								</div>
+								<small class="text-body-secondary">9 mins</small>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card shadow-sm">
+						<img src="{{ asset('assets/img/sql.jpeg') }}" style="width: 100%; height: 250px; object-fit: cover;" alt="sql">
+						<div class="card-body">
+							<p class="card-text">Apprenez SQL, MySQL et PostgreSQL pour concevoir, gérer et optimiser des bases de données professionnelles.</p>
+							<div class="d-flex justify-content-between align-items-center">
+								<div class="btn-group">
+									<button type="button" class="btn btn-sm btn-outline-secondary">voir</button>
+									<button type="button" class="btn btn-sm btn-outline-secondary">editer</button>
+								</div>
+								<small class="text-body-secondary">9 mins</small>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card shadow-sm">
+						<img src="{{ asset('assets/img/ux-ui.jpeg') }}" style="width: 100%; height: 250px; object-fit: cover;" alt="ux-ui">
+						<div class="card-body">
+							<p class="card-text">Apprenez à créer des sites web modernes avec HTML, CSS, JavaScript, PHP et Symfony.Elle couvre le front et le back</p>
+							<div class="d-flex justify-content-between align-items-center">
+								<div class="btn-group">
+									<button type="button" class="btn btn-sm btn-outline-secondary">voir</button>
+									<button type="button" class="btn btn-sm btn-outline-secondary">editer</button>
+								</div>
+								<small class="text-body-secondary">9 mins</small>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card shadow-sm">
+						<img src="{{ asset('assets/img/cyber.jpeg') }}" style="width: 100%; height: 250px; object-fit: cover;" alt="cyber">
+						<div class="card-body">
+							<p class="card-text">Découvrez les bases de la sécurité informatique, la protection des données, les tests</p>
+							<div class="d-flex justify-content-between align-items-center">
+								<div class="btn-group">
+									<button type="button" class="btn btn-sm btn-outline-secondary">voir</button>
+									<button type="button" class="btn btn-sm btn-outline-secondary">editer</button>
+								</div>
+								<small class="text-body-secondary">9 mins</small>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
