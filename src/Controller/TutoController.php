@@ -13,15 +13,26 @@ use Doctrine\ORM\EntityManagerInterface;
 final class TutoController extends AbstractController
 //  route tuto qui contient mes formation tuto
 {
-    #[Route('/tuto', name: 'app_tuto')]
-    public function index(): Response
+    #[Route('/tuto/{id}', name: 'app_tuto')]
+    public function index(EntityManagerInterface $entityManager, int $id): Response
     {
+        //  aller chercher le product avec id
+        $product = $entityManager->getRepository(Tuto::class)->find($id);
+        //  si produit n'existe pas , un msg d'erreur s'affichera
+        if(!$product){
+            throw $this->createNotFoundException(
+                'Aucun produit trouvé avec cette id'.$id
+            );
+        }
+        //  si produit trouvé 
         return $this->render('tuto/index.html.twig', [
             'controller_name' => 'TutoController',
+            //  je veux récup son nom 
+            'name'=> $product->getName()
         ]);
     }
     //  route pour ajouter un tuto
-    #[Route('/add-tuto', name: 'app_tuto')]
+    #[Route('/add-tuto', name: 'app_tuto_add')]
     public function createTuto(EntityManagerInterface $entityManager): Response
     {
         //  on doit tout mettre parce que tout nos données ne sont pas null 

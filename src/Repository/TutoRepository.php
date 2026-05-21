@@ -31,10 +31,10 @@ class TutoRepository extends ServiceEntityRepository
     //        ;
     //    }
 
-    //    public function findOneBySomeField($value): ?Tuto
+    //    public function findOneById($value): ?Tuto
     //    {
     //        return $this->createQueryBuilder('t')
-    //            ->andWhere('t.exampleField = :val')
+    //            ->andWhere('t.tuto = :val')
     //            ->setParameter('val', $value)
     //            ->getQuery()
     //            ->getOneOrNullResult()
