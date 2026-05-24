@@ -1,0 +1,53 @@
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Login{% endblock %}
+
+{% block body %}
+
+<div class="container mt-3" style="max-width: 650px;">
+
+    <h1 class="mb-4">Se connecter</h1>
+
+    {% if error %}
+        <div class="alert alert-danger mb-3">
+            {{ error.messageKey|trans(error.messageData, 'security') }}
+        </div>
+    {% endif %}
+
+    <form action="{{ path('app_login') }}" method="post">
+
+        <div class="mb-2">
+            <label for="email" class="form-label fs-6">Email</label>
+            <input
+                type="email"
+                name="_username"
+                id="email"
+                class="form-control form-control-lg fs-6"
+                value="{{ last_username }}"
+                placeholder="Saisir votre e-mail"
+            >
+        </div>
+
+        <div class="mb-2">
+            <label for="password" class="form-label fs-6">Mot de passe</label>
+            <input
+                type="password"
+                name="_password"
+                id="password"
+                class="form-control form-control-lg fs-6"
+                placeholder="Saisir votre mot de passe"
+            >
+        </div>
+
+        <input type="hidden" name="_target_path" value="/" />
+
+        <button type="submit" class="btn btn-primary px-4 py-2 fs-6">
+            Valider
+        </button>
+
+    </form>
+
+</div>
+
+{% endblock %}

@@ -53,7 +53,7 @@ final class SigninController extends AbstractController
             $em->flush();
 
             $this->addFlash('success', 'Inscription réussie !');
-            return $this->redirectToRoute('app_signin');
+            return $this->redirectToRoute('app_login');
         }
 
         return $this->render('signin/index.html.twig', [
